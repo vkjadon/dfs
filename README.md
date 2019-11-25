@@ -1,7 +1,7 @@
 # Depth First for Robotic Applications
 The code is written in Python 3.7
-#Add Goal
-goalState=[28]
+###Add Goal
+goalState=[28] #### Let Node number 28 is the Goal Node on the graph
 goalReached=0
 #Add Obstacle
 xObstacleState=[2]
