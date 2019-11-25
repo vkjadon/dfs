@@ -1,28 +1,23 @@
 # Depth First for Robotic Applications
 The code is written in Python 3.7
-###Add Goal
-goalState=[28] #### Let Node number 28 is the Goal Node on the graph
+## Add Goal
+goalState=[28] 
+## Let Node number 28 is the Goal Node on the graph
 goalReached=0
-#Add Obstacle
+## Add Obstacle
 xObstacleState=[2]
 yObstacleState=[2]
 
-# Creating Vertices for the Graph
-# Vertex Number to Start from 1
+## Creating Vertices for the Graph
+## Vertex Number to Start from 1
+
 vertices=[[i]for i in range(xLength*yLength)]
-print('Vertices List  \n ',vertices)
 vertices=np.reshape(vertices,(yLength,xLength))
-print('Vertices After Reshape in Grid  \n ', vertices)
 
-# Creating Neighbours for each Vertex of the Graph
-# The Neighbour List is the option of the movement in reverse order
-# Last element of the list is the first option for movement
-
+## Creating Neighbours for each Vertex of the Graph
+## The Neighbour List is the option of the movement in reverse order
+## Last element of the list is the first option for movement
 neighbour=[[]for i in range(xLength*yLength)]
-print('Neighbour \n',neighbour)
-edges=[]
-edgeCounter=0
-
 for i in range(0,yLength):
     for j in range(0, xLength):
         vertex=vertices[i][j]
