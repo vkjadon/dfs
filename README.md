@@ -11,8 +11,8 @@ yObstacleState=[2]
 ## Creating Vertices for the Graph
 ## Vertex Number to Start from 1
 
-vertices=[[i]for i in range(xLength*yLength)]
-vertices=np.reshape(vertices,(yLength,xLength))
+    vertices=[[i]for i in range(xLength*yLength)]
+    vertices=np.reshape(vertices,(yLength,xLength))
 
 ## Creating Neighbours for each Vertex of the Graph
 ## The Neighbour List is the option of the movement in reverse order
