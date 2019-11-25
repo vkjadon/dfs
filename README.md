@@ -21,40 +21,23 @@ neighbour=[[]for i in range(xLength*yLength)]
 for i in range(0,yLength):
     for j in range(0, xLength):
         vertex=vertices[i][j]
-        #print('Neighbour of Vertex ',i, j,vertex)
         rt=j+1
         up=i+1
         lt=j-1
         dn=i-1
-        #print('i and j',i,j)
-# Checking Connecting Vertex on Left
+### Checking Connecting Vertex on Left
         if(lt>=0):
             neighbour[vertex].append(vertices[i][lt])
-# Checking Connecting Vertex towards Up
+### Checking Connecting Vertex towards Up
         if(up<yLength):
             neighbour[vertex].append(vertices[up][j])
-# Checking Connecting Vertex towards Down
+### Checking Connecting Vertex towards Down
         if(dn>=0):
             neighbour[vertex].append(vertices[dn][j])
-# Checking Connecting Vertex on Right
+### Checking Connecting Vertex on Right
         if(rt<xLength):
             neighbour[vertex].append(vertices[i][rt])
-
-# Checking Connecting Vertex towards Right-Up
-        if(up<yLength and rt<xLength):
-            neighbour[vertex].append(vertices[up][rt])
-# Checking Connecting Vertex towards Left-Up
-        if(up<yLength and lt>=0):
-            neighbour[vertex].append(vertices[up][lt])
-# Checking Connecting Vertex towards Right-Dn
-        if(dn>=0 and rt<xLength):
-            neighbour[vertex].append(vertices[dn][rt])
-# Checking Connecting Vertex towards Left-Dn
-        if(dn>=0 and lt>=0):
-            neighbour[vertex].append(vertices[dn][lt])
-
-#print(neighbour)
-# Depth First algorithm
+### Depth First algorithm
 stack=[]
 visited=[]
 for obs in range(len(xObstacleState)):
