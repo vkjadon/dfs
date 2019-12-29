@@ -37,14 +37,5 @@ for i in range(0,yLength):
 ### Checking Connecting Vertex on Right
         if(rt<xLength):
             neighbour[vertex].append(vertices[i][rt])
-### Depth First algorithm
-stack=[]
-visited=[]
-for obs in range(len(xObstacleState)):
-    visited.append(vertices[yObstacleState[obs]][xObstacleState[obs]])
-    
-visited.append(0)
-counter=0
-stack.append(0) #start with Zeroth vertex (First)
-print('Stack ', stack)
+
 
